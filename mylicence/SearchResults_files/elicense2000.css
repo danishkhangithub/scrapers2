@@ -1,0 +1,1038 @@
+@import url("fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css");
+/*********   Defaults   *********/
+body {
+	background-color: #FFFFFF;
+	text-align: center !important;
+	/*needed to center container on page for ie 5*/
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+table {
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table > caption {
+	display: none;
+}
+
+td {
+	font-family: 'Segoe UI';
+	font-size: .9em;
+	padding: 0px;
+	margin: 0px;
+}
+
+a {
+	color: #376091;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:active {
+	position: relative;
+	top: 1px;
+}
+
+a[href]:hover, a[href]:focus, a[href]:active {
+	color: #990000;
+	text-decoration: underline;
+}
+
+ol li {
+	list-style: decimal outside none;
+	padding: 0px 0px 12px 0px;
+}
+
+ul li {
+	padding: 0px 0px 12px 6px;
+}
+
+h1 {
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 1rem;
+	background-color: #284B89;
+	color: white;
+	font-weight: 600;
+	padding: 1em;
+	border-radius: 5px;
+	margin-top: 1.5rem;
+	margin-bottom: 0.7rem;
+}
+
+/*********   Container Styles   *********/
+table.layout {
+	width: 100%;
+	height: 500px;
+	padding: 0px;
+	margin-left: auto;
+	/*centers container for non-ie*/
+	margin-right: auto;
+	background-color: #FFFFFF;
+}
+
+/*********   Center Column Styles   *********/
+td.center {
+	/*container*/
+	vertical-align: top;
+	height: 575px;
+	padding: 15px;
+	padding: 0 5rem 2rem 5rem;
+	width: 100%;
+}
+
+table.center {
+	/*content*/
+	background-color: #FFFFFF;
+}
+
+/*********   Left Column Styles   *********/
+td.left {
+	/*Container*/
+	vertical-align: top;
+	padding-top: 15px;
+	padding-left: 3px;
+	padding: 0;
+	background-color: #333333;
+	border-right: 1px solid lightgray;
+	color: #FFFFFF;
+	border-collapse: separate;
+	-webkit-box-shadow: 0.2rem 0 0.3rem -0.2rem gray;
+	-moz-box-shadow: 0.2rem 0 0.3rem -0.2rem gray;
+	box-shadow: 0.2rem 0 0.3rem -0.2rem gray;
+}
+
+td.left table.left {
+	/*Content*/
+	border: none;
+	color: #FFFFFF;
+	white-space: nowrap;
+}
+
+td.left td.sectiontitle {
+	background-color: #CC7027;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 0.2rem;
+}
+
+td.left td.sectiontitle h1, td.left td.sectiontitle h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.95rem;
+	font-weight: 600;
+	margin: 0.2rem;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+
+td.left td.menuLink:hover, td.left td.menuLink:focus, td.left td.menuLink:active,
+td.left tr.checklistItemRow:hover,
+td.left tr.checklistItemRow:focus,
+td.left tr.checklistItemRow:active,
+td.left tr:not([class]) > td:not([class]) > a:not([class]):hover,
+td.left tr:not([class]) > td:not([class]) > a:not([class]):focus,
+td.left tr:not([class]) > td:not([class]) > a:not([class]):active {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+td.left td.checklistItemCell1 {
+	width: 1px;
+}
+
+td.left a, td.left a:hover, td.left a:focus, td.left a:active {
+	font-size: 0.75rem;
+	display: block;
+	border: none;
+	color: white;
+	padding: 0.7em 1.5em 0.7em 0.7em;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+td.left a:hover, td.left a:focus, td.left a:active {
+	background-color: transparent;
+	text-decoration: inherit;
+}
+
+td.left a:hover:not([href]), td.left a:not([href]):focus, td.left a:not([href]):active {
+	cursor: default;
+}
+
+td.left a[class^=checklistItemAnchor] {
+	padding: 0.5em 1.5em 0.5em 0.7em;
+}
+
+td.left a.checklistItemAnchorRequired, td.left a.checklistItemAnchorRequired:hover, td.left a.checklistItemAnchorRequired:focus, td.left a.checklistItemAnchorRequired:active {
+	color: #D60000;
+	text-transform: uppercase;
+}
+
+td.left a.checklistItemAnchorRequired:after, td.left a.checklistItemAnchorRequired:hover:after, td.left a.checklistItemAnchorRequired:focus:after, td.left a.checklistItemAnchorRequired:active:after {
+	content: "*";
+}
+
+td.left a.checklistItemAnchorCurrent, td.left a.checklistItemAnchorCurrent:hover, td.left a.checklistItemAnchorCurrent:focus, td.left a.checklistItemAnchorCurrent:active, td.left a.checklistItemAnchorRequiredCurrent, td.left a.checklistItemAnchorRequiredCurrent:hover, td.left a.checklistItemAnchorRequiredCurrent:focus, td.left a.checklistItemAnchorRequiredCurrent:active {
+	color: lightskyblue;
+}
+
+td.left a.checklistItemAnchorCurrent:before, td.left a.checklistItemAnchorCurrent:hover:before, td.left a.checklistItemAnchorCurrent:focus:before, td.left a.checklistItemAnchorCurrent:active:before, td.left a.checklistItemAnchorRequiredCurrent:before, td.left a.checklistItemAnchorRequiredCurrent:hover:before, td.left a.checklistItemAnchorRequiredCurrent:focus:before, td.left a.checklistItemAnchorRequiredCurrent:active:before {
+	content: ">>";
+}
+
+td.left tr.checklistItemRow,
+td.left tr:not([class]) > td:not([class]) > a:not([class]),
+td.left td.checklistItemCell1,
+td.left td.checklistItemCell2,
+td.left td.menuLink a {
+	border: none;
+	border-top: 1px solid #444444;
+	border-bottom: 1px solid #222222;
+}
+
+/*********   Banner Styles   *********/
+td.banner {
+	vertical-align: top;
+	background-color: #2A4D87;
+}
+
+td.banner a, td.banner a:hover, td.banner a:focus, td.banner a:active {
+	color: white;
+	background-color: transparent;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	text-align: center;
+	border-left: 1px solid rgba(255, 255, 255, 0.1);
+	border-right: 1px solid rgba(0, 0, 0, 0.15);
+	padding: 1rem;
+	display: inline-block;
+}
+
+td.banner a:hover, td.banner a:focus, td.banner a:active {
+	background-color: rgba(0, 0, 0, 0.15);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.bannerlinkbar {
+	align-items: center;
+	justify-content: flex-start;
+}
+
+/*********   Footer Styles   *********/
+td.footer {
+	/*container*/
+}
+
+td.footer table.footer {
+	/*content*/
+	color: #FFFFFF;
+}
+
+td.footer a {
+	color: #FFFFFF;
+	font-weight: normal;
+	text-decoration: none;
+	text-decoration: underline;
+	padding: 12px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.8rem;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+td.footer a:hover, td.footer a:focus, td.footer a:active {
+	color: #FFFFFF;
+	text-decoration: underline;
+	font-weight: normal;
+	opacity: 0.7;
+}
+
+td.footer i.footerlinkimg {
+	font-size: 1.8rem;
+}
+
+td.footer .contact-a {
+	vertical-align: super;
+}
+
+.footerbartop {
+	background-color: #EBEBEB;
+}
+
+.footerbartop h5 {
+	color: #666;
+	font-size: 1.75rem;
+	font-weight: 600;
+	text-align: center;
+	padding-top: 4rem;
+	margin: 0;
+}
+
+.footerbartop .flexbox {
+	justify-content: space-around;
+	justify-content: space-evenly;
+	padding: 1.5rem 1rem;
+}
+
+.footerbarbottom {
+	background-color: #236192;
+	padding: 3rem 1rem;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.footerbarbottom a {
+	text-decoration: underline;
+}
+
+/*********   Error Message Styles   *********/
+.error {
+	color: #D60000;
+}
+
+td.error span:not(:empty),
+span.error:not(:empty) {
+	color: #D60000;
+	background-color: #FFDDDD;
+	border-left: 0.2em solid #F44336;
+	font-weight: bold;
+	font-size: .8em;
+	padding: 0.1em 1rem 0.1em 0.5em;
+	display: inline-block;
+	display: block;
+	padding: 0.4rem 0 0.4rem 0.2rem;
+	margin: 0.3rem 0 0.3rem 0;
+}
+
+span[id^=required_],
+td.textbox > table td + td > span[id*=ct] {
+	/* Validator message created by the Email control */
+	color: #D60000;
+	background-color: #FFDDDD;
+	border-left: 0.2em solid #F44336;
+	font-weight: bold;
+	font-size: .8em;
+	padding: 0.1em 1rem 0.1em 0.5em;
+	display: inline-block;
+}
+
+td.textbox > input ~ span[id^=required_],
+td.textbox > table td + td > span[id*=ct] {
+	/* Validator message created by the Email control */
+	margin-left: 0.5rem;
+	white-space: nowrap;
+}
+
+span[style*="visibility:hidden"],
+span[style*="visibility: hidden"] {
+	display: none;
+}
+
+/* So we don't have to set a Property of display=dynamic on all our Validator controls */
+/*********   Form Styles   *********/
+td:not(.modulelabel):not(.pagetitle) > span.modulelabel,
+td:not(.modulelabel):not(.pagetitle) > span.pagetitle {
+	display: block;
+}
+
+td.modulelabel,
+td.pagetitle,
+td:not(.modulelabel):not(.pagetitle) > span.modulelabel,
+td:not(.modulelabel):not(.pagetitle) > span.pagetitle {
+	background-color: #EBEBEB;
+	color: #284B89;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2rem;
+	font-weight: normal;
+	width: 100%;
+	padding: 1rem 0;
+	border: 0;
+	margin: 0;
+	vertical-align: middle;
+	border-collapse: separate;
+	-webkit-box-shadow: -5rem 0 0 0 #EBEBEB, 5rem 0 0 0 #EBEBEB;
+	-moz-box-shadow: -5rem 0 0 0 #EBEBEB, 5rem 0 0 0 #EBEBEB;
+	box-shadow: -5rem 0 0 0 #EBEBEB, 5rem 0 0 0 #EBEBEB;
+}
+
+td.modulelabel h1, td.modulelabel h2,
+td.pagetitle h1,
+td.pagetitle h2,
+td:not(.modulelabel):not(.pagetitle) > span.modulelabel h1,
+td:not(.modulelabel):not(.pagetitle) > span.modulelabel h2,
+td:not(.modulelabel):not(.pagetitle) > span.pagetitle h1,
+td:not(.modulelabel):not(.pagetitle) > span.pagetitle h2 {
+	background-color: inherit;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	text-transform: inherit;
+}
+
+td.instructions {
+	padding: 12px 3px 15px 3px;
+}
+
+td.signature {
+	border-bottom: 1px solid;
+	height: 50px;
+}
+
+td.topLabel {
+	width: 20%;
+	text-align: left;
+	font-size: .7em;
+	font-weight: bold;
+	padding: 0px 6px 0px 0px;
+}
+
+td.label {
+	width: 20%;
+	text-align: right;
+	font-size: .7em;
+	font-weight: bold;
+	padding: 0px 6px 0px 0px;
+}
+
+td.label1 {
+	width: 30%;
+	font-weight: bold;
+	text-align: right;
+	font-size: .7em;
+	padding: 9px 6px 0px 0px;
+}
+
+td.label2 {
+	width: 15%;
+	font-weight: bold;
+	text-align: right;
+	font-size: .7em;
+	padding: 0px 6px 0px 0px;
+}
+
+td.example {
+	font-size: .7em;
+	text-align: left;
+	color: #17365d;
+	vertical-align: top;
+	padding: 0px 0px 0px 6px;
+}
+
+.lblDelete {
+	color: #D60000;
+	font-size: 10pt;
+}
+
+.radio {
+	padding-right: 6px;
+}
+
+td.ccradio {
+	background-color: #4E76B6;
+	color: #FFFFFF;
+	width: 5%;
+}
+
+.cartItemDesc {
+	font-weight: bold;
+	display: block;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.feeItemDesc {
+	display: block;
+	text-align: right;
+	padding-right: 5px;
+}
+
+/*********   Textboxes   *********/
+td.textbox {
+	padding: 6px 3px 0px 0px;
+}
+
+input.textbox,
+textarea.textbox,
+input[type="text"],
+input[type="password"],
+select {
+	border: 1px solid #b9b9b9;
+	border-radius: 0.4em;
+}
+
+/*********   Buttons   *********/
+td.button, td.link_button, td.button-small, td.button2 {
+	padding-top: 1.5rem;
+}
+
+input.button, input.link_button, input.button-small, input.button2,
+td.textbox input:not([class*=button]) ~ input[type=button],
+td.textbox input:not([class*=button]) ~ input[type=submit],
+a.button,
+a.link_button,
+a.button-small,
+a.button2,
+td.textbox table a,
+td.textbox input:not([class*=button]) ~ a,
+.button a,
+.link_button a,
+.button-small a,
+.button2 a,
+td.textbox table a a,
+td.textbox input:not([class*=button]) ~ a a,
+td.textbox input:not([class*=button]) ~ input[type=button] a,
+td.textbox input:not([class*=button]) ~ input[type=submit] a,
+input[type=button],
+input[type=submit] {
+	min-width: 7.5rem;
+	background-color: #064977;
+	color: white;
+	font-family: 'ebrima';
+	font-weight: normal;
+	text-align: center;
+	font-size: 0.9rem;
+	padding: 0.2rem 1rem;
+	border-radius: 0.5rem;
+	margin: 1rem;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+input.button:active, input.link_button:active, input.button-small:active, input.button2:active,
+td.textbox input:not([class*=button]) ~ input:active[type=button],
+td.textbox input:not([class*=button]) ~ input:active[type=submit],
+a.button:active,
+a.link_button:active,
+a.button-small:active,
+a.button2:active,
+td.textbox table a:active,
+td.textbox input:not([class*=button]) ~ a:active,
+.button a:active,
+.link_button a:active,
+.button-small a:active,
+.button2 a:active,
+td.textbox table a a:active,
+td.textbox input:not([class*=button]) ~ a a:active,
+td.textbox input:not([class*=button]) ~ input[type=button] a:active,
+td.textbox input:not([class*=button]) ~ input[type=submit] a:active,
+input[type=button]:active,
+input[type=submit]:active {
+	position: relative;
+	top: 1px;
+}
+
+input.button:hover, input.button:focus, input.link_button:focus, input.button-small:focus, input.button2:focus,
+td.textbox input:not([class*=button]) ~ input:focus[type=button],
+td.textbox input:not([class*=button]) ~ input:focus[type=submit], input.button:active, input.link_button:active, input.button-small:active, input.button2:active,
+td.textbox input:not([class*=button]) ~ input:active[type=button],
+td.textbox input:not([class*=button]) ~ input:active[type=submit], input.link_button:hover, input.button-small:hover, input.button2:hover,
+td.textbox input:not([class*=button]) ~ input:hover[type=button],
+td.textbox input:not([class*=button]) ~ input:hover[type=submit],
+a.button:hover,
+a.button:focus,
+a.link_button:focus,
+a.button-small:focus,
+a.button2:focus,
+td.textbox table a:focus,
+td.textbox input:not([class*=button]) ~ a:focus,
+a.button:active,
+a.link_button:active,
+a.button-small:active,
+a.button2:active,
+td.textbox table a:active,
+td.textbox input:not([class*=button]) ~ a:active,
+a.link_button:hover,
+a.button-small:hover,
+a.button2:hover,
+td.textbox table a:hover,
+td.textbox input:not([class*=button]) ~ a:hover,
+.button a:hover,
+.link_button a:hover,
+.button-small a:hover,
+.button2 a:hover,
+td.textbox table a a:hover,
+td.textbox input:not([class*=button]) ~ a a:hover,
+td.textbox input:not([class*=button]) ~ input[type=button] a:hover,
+td.textbox input:not([class*=button]) ~ input[type=submit] a:hover,
+.button a:focus,
+.link_button a:focus,
+.button-small a:focus,
+.button2 a:focus,
+td.textbox table a a:focus,
+td.textbox input:not([class*=button]) ~ a a:focus,
+td.textbox input:not([class*=button]) ~ input[type=button] a:focus,
+td.textbox input:not([class*=button]) ~ input[type=submit] a:focus,
+.button a:active,
+.link_button a:active,
+.button-small a:active,
+.button2 a:active,
+td.textbox table a a:active,
+td.textbox input:not([class*=button]) ~ a a:active,
+td.textbox input:not([class*=button]) ~ input[type=button] a:active,
+td.textbox input:not([class*=button]) ~ input[type=submit] a:active,
+input[type=button]:hover,
+input[type=button]:focus,
+input[type=button]:active,
+input[type=submit]:hover,
+input[type=submit]:focus,
+input[type=submit]:active {
+	background-color: #053759;
+	cursor: pointer;
+	color: white;
+	text-decoration: none;
+}
+
+.button-small {
+	font-size: 0.75rem;
+	font-weight: bold;
+	padding: 0.2rem 0.7rem;
+}
+
+.button2.button2, td.textbox table a,
+td.textbox input:not([class*=button]) ~ a,
+td.textbox input:not([class*=button]) ~ input[type=button],
+td.textbox input:not([class*=button]) ~ input[type=submit] {
+	background-color: lightgray;
+	color: #366092;
+	font-size: 0.75rem;
+	font-weight: bold;
+	padding: 0.2em 0;
+	border-radius: 1rem;
+	margin: 0 0 0 0.5rem;
+}
+
+.button2.button2:hover, .button2.button2:focus, td.textbox table a:focus,
+td.textbox input:not([class*=button]) ~ a:focus,
+td.textbox input:not([class*=button]) ~ input:focus[type=button],
+td.textbox input:not([class*=button]) ~ input:focus[type=submit], .button2.button2:active, td.textbox table a:active,
+td.textbox input:not([class*=button]) ~ a:active,
+td.textbox input:not([class*=button]) ~ input:active[type=button],
+td.textbox input:not([class*=button]) ~ input:active[type=submit], td.textbox table a:hover,
+td.textbox input:not([class*=button]) ~ a:hover,
+td.textbox input:not([class*=button]) ~ input:hover[type=button],
+td.textbox input:not([class*=button]) ~ input:hover[type=submit] {
+	background-color: #064977;
+	color: white;
+}
+
+td.textbox table {
+	width: 1px;
+}
+
+/*********   Repeater List Styles   *********/
+.llheader, .rheader {
+	font-size: 0.9em;
+	font-weight: bold;
+	background-color: #F5B133;
+	color: #FFFFFF;
+	padding: 0.8em 0 0.8em 0.7em;
+	border-radius: 0.3rem 0.3rem 0 0;
+	font-family: 'ebrima';
+}
+
+.llheader a, .rheader a {
+	color: #445c70;
+	padding: 3px 15px 3px 15px;
+	font-size: 0.8em;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	white-space: nowrap;
+	float: right;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.llheader a:hover, .llheader a:focus, .llheader a:active, .rheader a:hover, .rheader a:focus, .rheader a:active {
+	background-color: #284b89;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.glabel, .rlabel, .gdata, .rdata {
+	font-size: 0.8em;
+	padding: 0 0.2em 0 0.4em;
+	vertical-align: top;
+}
+.glabel, .rlabel {
+	color: #4E76B6;
+	white-space: nowrap;
+	width: 1px;
+}
+.gdata, .rdata {
+	padding-right: 2rem;
+}
+
+
+.repeatercontainer,
+.repeatercontainer > table,
+.repeatercontainer > * > table,
+.repeatercontainer > * > table > tbody > tr > td {
+	border-color: transparent;
+}
+.repeatercontainer > table > tbody > tr + tr,
+.repeatercontainer > * > table > tbody > tr + tr {
+	border-top: 1px solid grey;
+}
+.emptymessage, .repeatercontainer > table:only-child > tbody > tr:only-child > td:only-child:not([class]),
+.repeatercontainer > * > table:only-of-type > tbody > tr:only-child > td:only-child:not([class]) {
+	border: 1px solid gray;
+	padding: 0.3rem;
+	text-align: center;
+	display: block;
+}
+
+.repeateritem, .repeateritem > table {
+	border-color: transparent;
+}
+
+.repeateritem .gheader td, .repeateritem .rheader td {
+	background: lightgrey;
+	color: black;
+	font-weight: normal;
+	border-bottom: 1px solid grey;
+}
+
+.repeateritem.columnlayout .glabel, .repeateritem.columnlayout .rlabel {
+	background-color: rgba(0, 0, 0, 0.07);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	text-align: center;
+}
+
+.repeateritem.columnlayout .glabel, .repeateritem.columnlayout .glabel > *, .repeateritem.columnlayout .rlabel, .repeateritem.columnlayout .rlabel > * {
+	white-space: nowrap;
+}
+
+.repeateritem.columnlayout .gdata, .repeateritem.columnlayout .rdata {
+	text-align: center;
+}
+
+.repeateritem > table {
+	background-color: rgba(0, 0, 0, 0.08);
+	margin-bottom: 1rem;
+	border-radius: 0.5rem;
+}
+
+.gridnoborder td {
+	border-color: transparent;
+	border-left: none;
+	border-right: none;
+}
+
+.gridaslist {
+	white-space: nowrap;
+	text-align: center;
+	border-color: transparent;
+}
+
+/*********   DataGrid Header/Footer/Item/Alternating Styles   *********/
+.datagrid {
+	margin: 1rem auto;
+}
+
+.datagrid, .datagrid td {
+	border: 0;
+}
+
+.datagrid td {
+	padding: 0.4em 0.7em;
+}
+
+.gheader td {
+	padding: 0.4em 0.7em;
+	text-align: center;
+	background-color: #F5B133;
+	color: white;
+	font-size: 0.9em;
+	font-weight: bold;
+	font-family: ebrima;
+	border-color: transparent;
+}
+
+.gdetail td, .datagrid > tbody > tr:not([class]) td, .galt td, .datagrid > tbody > tr:not([class]):nth-child(odd) td {
+	text-align: center;
+	font-size: 0.9em;
+	padding: 0.4em;
+	background-color: #F2F2F5;
+	border-color: transparent;
+}
+
+.galt td, .datagrid > tbody > tr:not([class]):nth-child(odd) td {
+	background-color: #DADADC;
+}
+
+.gleft td {
+	text-align: left;
+}
+
+.gfooter td {
+	padding: 4px 0px 4px 0px;
+	text-align: center;
+	background-color: #4E76B6;
+	color: white;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+td.gtreedepth {
+	text-align: left;
+	font-family: Courier, monospace;
+	padding-right: 3px;
+}
+
+.gdetail_numbered {
+	counter-increment: g_index;
+}
+
+table tr.gdetail_numbered > td:first-child:before {
+	content: counter(g_index) ".";
+}
+
+table[id^=attachments] caption {
+	display: table-caption;
+	font-weight: bold;
+	font-size: 1em;
+	color: white;
+	background-color: #284b89;
+	border-radius: 0.5em 0.5em 0 0;
+}
+
+/*********   UDO Styles   *********/
+table[id^=user_fields][rules] {
+	/* Multi-Occurrence UDODataGrid */
+	margin-bottom: 1.5rem;
+}
+
+table[id^=user_fields][rules], table[id^=user_fields][rules] > tbody {
+	border-radius: 0.5rem;
+}
+
+table[id^=user_fields][rules] > tbody > tr:first-of-type {
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+
+table[id^=user_fields][rules] > tbody > tr:last-of-type {
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+
+table[id^=user_fields][rules] > tbody > tr:first-of-type > td:first-child {
+	border-radius: 0.5rem 0 0 0;
+}
+
+table[id^=user_fields][rules] > tbody > tr:first-of-type > td:last-child {
+	border-radius: 0 0.5rem 0 0;
+}
+
+table[id^=user_fields][rules] > tbody > tr:last-of-type > td:first-child {
+	border-radius: 0 0 0 0.5rem;
+}
+
+table[id^=user_fields][rules] > tbody > tr:last-of-type > td:last-child {
+	border-radius: 0 0 0.5rem 0;
+}
+
+table[id^=user_fields][rules],
+table[id^=user_fields][rules] tbody,
+table[id^=user_fields][rules] table,
+table[id^=user_fields][rules] td {
+	text-align: center;
+	margin: auto;
+	border-color: transparent;
+}
+
+table[id^=user_fields][rules]:only-child {
+	/*	Excludes read-only UDODataGrids, which get created with a hidden input control after the table	*/
+}
+
+table[id^=user_fields][rules]:only-child, table[id^=user_fields][rules]:only-child table, table[id^=user_fields][rules]:only-child tbody {
+	width: 1px;
+}
+
+table[id^=user_fields][rules] > tbody > tr {
+	/* Hiding the pop-up date selector */
+}
+
+table[id^=user_fields][rules] > tbody > tr > td {
+	background-color: #F2F2F5;
+}
+
+table[id^=user_fields][rules] > tbody > tr:nth-child(even) > td {
+	background-color: #DADADC;
+}
+
+table[id^=user_fields][rules] > tbody > tr:first-child > td {
+	background-color: #F5B133;
+	color: white;
+	font-weight: bold;
+}
+
+table[id^=user_fields][rules] > tbody > tr td {
+	text-align: center;
+	padding: 0.1em 0.3em;
+}
+
+table[id^=user_fields][rules] > tbody > tr input + img[onclick^=popUpCalendar] {
+	display: none;
+}
+
+table[id^=user_fields]:not([rules]) {
+	/* Single-Occurrence UDO Fields */
+}
+
+table[id^=user_fields] input ~ span[id*=rv], table[id^=user_fields] select ~ span[id*=rv] {
+	color: #D60000;
+	background-color: #FFDDDD;
+	border-left: 0.2em solid #F44336;
+	font-weight: bold;
+	font-size: .8em;
+	padding: 0.1em 1rem 0.1em 0.5em;
+	display: inline-block;
+	display: block;
+	text-align: center;
+	white-space: pre;
+}
+
+/*	Data entry controls in a UDODataGrid (e.g.: input, select) get their ids constructed dynamically, but they include the following:	*/
+/*	_{user_field_group_id}_{user_field_table_id}_{user_field_id}_	*/
+/*	user_field_table_id will be either 7 (for License) or 8 (for Person)	*/
+/*	So if we wanted to target the textbox of a field named State with a user_field_id of 83	*/
+/*	in a multi-occurrence License UDO named Dispensing Locations with a user_field_group_id of 9	*/
+/*	we'd identify it like this: table[id^="user_fields"][rules] input[id*="_9_7_83_"]	*/
+/*********   Custom Styles   *********/
+.flexbox {
+	display: block;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+table[border="1"] {
+	border-color: transparent;
+}
+
+[data-emptymsg]:empty:before {
+	content: attr(data-emptymsg);
+}
+
+[data-contentafter]:after {
+	content: attr(data-contentafter);
+}
+
+[data-contentbefore]:before {
+	content: attr(data-contentbefore);
+}
+
+input.req_field,
+select.req_field,
+.req_field input,
+.req_field select {
+	border-color: #FF0000;
+	border-style: groove;
+	border-width: 3px;
+}
+
+.compact {
+	white-space: nowrap;
+	width: 1px;
+}
+
+.centered {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.buffer_top {
+	padding-top: 2rem;
+}
+
+td > :not(:empty).onecellmanyitems:not(:first-child), td > :not(:empty).onecellmanyitems td > :not(:empty).onecellmanyitemsrow:not(:first-child), td > :not(:empty).onecellmanyitems td > :not(:empty).onecellmanyitemshorizontal:not(:first-child) {
+	margin-left: 0.5em;
+}
+
+td > :not(:empty).onecellmanyitems:not(:last-child), td > :not(:empty).onecellmanyitems td > :not(:empty).onecellmanyitemsrow:not(:last-child), td > :not(:empty).onecellmanyitems td > :not(:empty).onecellmanyitemshorizontal:not(:last-child) {
+	margin-right: 0.5em;
+}
+
+td > :not(:empty).onecellmanyitems td > :not(:empty).onecellmanyitemscolumn, td > :not(:empty).onecellmanyitems td > :not(:empty).onecellmanyitemsvertical {
+	display: block;
+}
+
+td > :not(:empty).onecellmanyitems td > :not(:empty).onecellmanyitemscolumn:not(:first-child), td > :not(:empty).onecellmanyitems td > :not(:empty).onecellmanyitemsvertical:not(:first-child) {
+	margin-top: 0.5em;
+}
+
+td > :not(:empty).onecellmanyitems td > :not(:empty).onecellmanyitemscolumn:not(:last-child), td > :not(:empty).onecellmanyitems td > :not(:empty).onecellmanyitemsvertical:not(:last-child) {
+	margin-bottom: 0.5em;
+}
+
+/*********   Styles Not For Printing   *********/
+@media print {
+	td.banner,
+	td.left,
+	td.footer,
+	.link_button,
+	.button,
+	.link_button,
+	.button-small,
+	.button2,
+	td.textbox table a,
+	td.textbox input:not([class*=button]) ~ a,
+	td.textbox input:not([class*=button]) ~ input[type=button],
+	td.textbox input:not([class*=button]) ~ input[type=submit] {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+.hidden, .hiddenspacer {
+	visibility: hidden;
+	display: none;
+}
+
+/**********    UDO Datagrid    ********************/
+.udo_datagrid {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.udo_datagrid th {
+	padding: 0.4em 0.7em;
+	text-align: left;
+	background-color: #F5B133;
+	color: #F2F2F5;
+	font-size: 0.9em;
+	font-weight: bold;
+	font-family: ebrima;
+	border-color: transparent;
+}
