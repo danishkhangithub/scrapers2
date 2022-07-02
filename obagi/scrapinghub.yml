@@ -1,0 +1,5 @@
+project: 443073
+requirements:
+    file: requirements.txt
+stacks:
+    default: scrapy:obagi1.py
