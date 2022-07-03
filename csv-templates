@@ -1,0 +1,6 @@
+
+             with open('schools_data.csv', 'w') as f:
+                 writer = csv.writer(f)
+                 
+                 for row in results:
+                   writer.writerow([row])
